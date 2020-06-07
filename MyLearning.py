@@ -91,11 +91,11 @@ class SimMyPES(Operator):
 
         #########################################################################
         # I would like to get y and y_hat
-        pre = signals[self.pre]            #Target (Y)
-        post = signals[self.post]          #Actual (Y_hat)
+        pre = signals[self.pre]            #Target (Y)         Exception
+        post = signals[self.post]          #Actual (Y_hat)     Exception 
 
         # I would like to get membrane potential of special Ensemble like "post"
-        mempotential = signals[self.post]["voltage"]
+        mempotential = signals[self.post]["voltage"]        # Exception
 
         #########################################################################
         
