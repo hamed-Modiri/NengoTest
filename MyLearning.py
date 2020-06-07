@@ -130,6 +130,7 @@ def build_mypes(model, pes, rule):
         post = get_post_ens(conn)
         encoders = model.sig[post]["encoders"][:, conn.post_slice]
     
+    ##############################################
     pre = Signal(shape=rule.size_in, name="PES:pre")
     model.add_op(Reset(pre))
     model.sig[rule]["pre"] = pre  # target (Y)
@@ -157,4 +158,4 @@ def build_mypes(model, pes, rule):
     model.sig[rule]["pre"] = pre
     model.sig[rule]["post"] = post
 
-
+###################################################################
